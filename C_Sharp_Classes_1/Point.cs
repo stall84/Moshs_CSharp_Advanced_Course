@@ -1,0 +1,30 @@
+﻿using System;
+namespace C_Sharp_Classes_1
+{
+    public class Point
+    {
+        public int X;
+        public int Y;
+
+        public Point(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+
+        public void Move(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+
+        public void Move(Point newLocation)
+        {
+            if (newLocation == null)
+            {
+                throw new ArgumentException("newLocation");
+            }
+            Move(newLocation.X, newLocation.Y);
+        }
+    }
+}

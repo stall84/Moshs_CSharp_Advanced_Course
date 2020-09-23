@@ -6,26 +6,24 @@ namespace C_Sharp_Classes_1
     {
         public int Id;
         public string Name;
-        public List<Order> Orders;
+        public readonly List<Order> Orders = new List<Order>();  // Another way of initializing the List type automatically 
 
 
-        public Customer()
+        public Customer(int id)
         {
-            Orders = new List<Order>();         // A List must be initialized by constructor to avoid null ref exception
-        }
-
-        public Customer(int id)                 // We can ensure that the first parameterless constructor with our Orders initialization always gets
-            : this()                            // called first by adding a : this() syntax to the other constructors
-        {
-            
             this.Id = id;
         }
 
-        public Customer(int id, string name)
-            : this(id)
+        public Customer(int id, string name)        // We can ensure that the first parameterless constructor with our Orders initialization always gets
+            : this(id)                            // called first by adding a : this() syntax to the other constructors
         {
-           
             this.Name = name;
+            
+        }
+
+        public void Promote()
+        {
+            // ...
         }
 
     }
