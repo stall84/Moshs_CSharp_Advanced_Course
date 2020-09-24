@@ -13,15 +13,9 @@ namespace C_Sharp_Classes_1
             //UsePoints();
             //UseParams();
 
-            var customer = new Customer(2, "Carrol");
+           
 
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
-
-            customer.Promote();
-
-            Console.WriteLine($"Customer Object: ID: {customer.Id}, Name: {customer.Name}, No. of Orders: {customer.Orders.Count}");
-
+            
         }
 
         static void UseParams()
