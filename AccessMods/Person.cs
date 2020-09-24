@@ -3,14 +3,18 @@
 namespace AccessMods
 {
     class Person
-    {
-        private DateTime _birthdate;
 
-        public DateTime Birthdate
-        {
-            get { return _birthdate; }
-            set { _birthdate = value; }
-        }
+        // Evolution of Birthdate get/set methods shown below with furthest down = oldest/most verbose 
+    {
+        public DateTime Birthdate { get; set; }     // Takes it even further. Allow the C# compiler to create the private
+                                                    // readonly field for you, also handling the actual getting and setting codeblock logic
+        //private DateTime _birthdate;
+
+        //public DateTime Birthdate
+        //{
+        //    get { return _birthdate; }      // Simply returning the private field .. just like the lengthy GetBirthdate method below commented out
+        //    set { _birthdate = value; }     // Using value keyword to get whatever will be on the right side of the assignment at runtime
+        //}
 
         //public string _name;
 
