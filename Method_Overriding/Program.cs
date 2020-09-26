@@ -9,11 +9,16 @@ namespace Method_Overriding
         {
             var shapes = new List<Shape>();
 
-            shapes.Add(new Circle());
-            shapes.Add(new Rectangle());
+            var circle = new Circle();
+            circle.Draw(); 
+           
+            
 
-            var canvas = new Canvas();
-            canvas.DrawShapes(shapes);
+            //shapes.Add(new Circle());
+            //shapes.Add(new Rectangle());
+
+            //var canvas = new Canvas();
+            //canvas.DrawShapes(shapes);
         }
     }
 }

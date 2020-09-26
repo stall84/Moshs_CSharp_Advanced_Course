@@ -9,7 +9,7 @@ namespace Method_Overriding
         {
             Console.WriteLine("Draw a circle");
             // Can write any code specific to Circle class using override of Shape's Draw method
-            //base.Draw();
+            base.Draw();
         }
     }
 
@@ -26,10 +26,13 @@ namespace Method_Overriding
         public int Width { get; set; }
         public int Height { get; set; }
         public Position Position { get; set; }
-
+        public virtual void Crapper()
+        {
+            Console.WriteLine("Take a Dump");
+        }
         public virtual void Draw()
         {
-
+            Console.WriteLine("Drawing SHAPE of type....");
         }
 
     }
